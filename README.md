@@ -19,7 +19,7 @@ Este proyecto contiene pruebas automatizadas de un flujo de compra en la página
 
 Antes de ejecutar las pruebas deben de tener los siguiente programas instalados:
 
-- **Java 11 o superior**: [Descargar aquí](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- **Java 17 o superior**: [Descargar aquí](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - **Maven**: [Descargar aquí](https://maven.apache.org/download.cgi)
 - **IntelliJ IDEA o Eclipse** (recomendado con plugins de Cucumber y Gherkin).
 
