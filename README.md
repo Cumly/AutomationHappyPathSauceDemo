@@ -1,8 +1,19 @@
-# Serenity Template
+# Prueba Técnica – Especialista QA 
 
 **Autor**: GhulyIu
 
-Este proyecto contiene la estructura para armar un proyecto en Serenity
+Este proyecto contiene pruebas automatizadas de un flujo de compra en la página. Utilizando Serenity BDD + Cucumber + Selenium para la ejecución.
+
+**Link Página:** https://www.saucedemo.com
+
+**Flujo completo:**
+
+- Ingreso al sistema con credenciales
+- Agregar dos productos al carrito
+- Visualizar el carrito
+- Completar el formulario de compra
+- Finalizar la compra
+
 
 ## Requisitos
 
@@ -21,22 +32,8 @@ Antes de ejecutar las pruebas deben de tener los siguiente programas instalados:
    `mvn clean install`
 
 
-2. **Edita el contenido**:
 
-   Una vez instaladas las dependencias, edita el contenido en este orden:
-
-   - **Features/**: Define el comportamiento del negocio en lenguaje Gherkin.
-   - **Stepdefinitions/**: Mapea los pasos de Gherkin hacia los métodos de Java.
-   - **Steps/**: Escribe la lógica de las acciones y las validaciones (Assertions).
-   - **Pages/**: Registra los selectores e interacciones básicas con la interfaz.
-   - **Model/**: Define las clases de datos u objetos de negocio
-   - **Utils/** Implementa funciones de ayuda reutilizables
-
-
-      No modifiques otros directorios o archivos para asegurar la estabilidad del framework y la correcta generación de los reportes de Serenity.
-
-
-3. **Ejecutar las pruebas y generar el reporte**:
+2. **Ejecutar las pruebas y generar el reporte**:
 
    Una vez instaladas las dependencias, ejecutar el siguiente comando:
 
@@ -45,11 +42,11 @@ Antes de ejecutar las pruebas deben de tener los siguiente programas instalados:
 
       Este comando realizará las siguientes acciones:
    
-       - Ejecutará las pruebas
+       - Ejecutará las pruebas automatizadas
        - Generará un reporte visual en formato **HTML** que podrás abrir en tu navegador.
 
 
-4. **Accede al archivo resultante**:
+3. **Accede al archivo resultante**:
 
    Una vez que las pruebas hayan finalizado, el archivo HTML del reporte generado se encontrará en la siguiente ruta:
 
@@ -66,9 +63,8 @@ Antes de ejecutar las pruebas deben de tener los siguiente programas instalados:
 
 Para clonar el repositorio, utiliza el siguiente comando:
 
-`git clone [https://github.com/Cumly/Serenity-Template.git]`
-`cd SerenityTemplate`
-
+`git clone https://github.com/Cumly/Automation-Happy-Path-Sauce-Demo-.git`
+`cd Automation-Happy-Path-Sauce-Demo`
 
 Después de clonar el repositorio, debes instalar las dependencias y ejecutar las pruebas siguiendo los pasos detallados anteriormente.
 

@@ -9,7 +9,7 @@ public class WebDriverHooks {
 
     @Before(order = 0)
     public void setupDriver() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.edgedriver().setup();
     }
 
     @After(order = 0)

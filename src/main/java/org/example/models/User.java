@@ -2,30 +2,41 @@ package org.example.models;
 
 public class User {
 
-    private String name;
-    private String country;
-    private String city;
-    private Long card;
-    private Integer month;
-    private Integer year;
+    private String firstName;
+    private String lastName;
+    private String postalCode;
 
     public User() {};
 
-    public User(String name, String country, String city, Long card, Integer month, Integer year) {
-        this.name = name;
-        this.country = country;
-        this.city = city;
-        this.card = card;
-        this.month = month;
-        this.year = year;
+    public User(String firstName, String lastName, String postalCode) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.postalCode = postalCode;
+
     }
 
-    public String getName() {
-        return name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String name) {
+        this.firstName = name;
     }
 
 

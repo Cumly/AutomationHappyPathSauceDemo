@@ -1,36 +1,24 @@
 package org.example.utils;
 
-// ESTOS SON LOS IMPORTS QUE TE FALTAN:
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
+import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
-public class BrowserUtils {
+public class BrowserUtils extends PageObject {
 
-    private WebDriver driver;
-
-    // Constructor que recibe el driver desde el test
-    public BrowserUtils(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    /**
-     * Espera y acepta alertas de JavaScript
-     */
-    public void acceptAlertIfPresent() {
+    public void acceptAlert() {
         try {
-            // Si WebDriver o WebDriverWait salen en rojo,
-            // es que falta el import de arriba o la dependencia en el pom.xml
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            wait.until(ExpectedConditions.alertIsPresent());
+            Thread.sleep(1000);
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
 
-            Alert alert = driver.switchTo().alert();
-            System.out.println("DEBUG: Alerta encontrada: " + alert.getText());
-            alert.accept();
         } catch (Exception e) {
-            System.out.println("DEBUG: No se detectó ninguna alerta del navegador.");
+            System.out.println("DEBUG: Error al intentar presionar ENTER: " + e.getMessage());
         }
     }
+
 }
