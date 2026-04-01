@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Ejecutar pruebas
-        run: mvn clean verify -Dwebdriver.driver=chrome -Dchrome.switches="--headless"
+      - run: mvn clean verify -Dwebdriver.driver=chrome -Dchrome.switches="--headless;--window-size=1920,1080;--no-sandbox;--disable-dev-shm-usage"
 
       - name: Guardar reporte Serenity
         uses: actions/upload-artifact@v4
