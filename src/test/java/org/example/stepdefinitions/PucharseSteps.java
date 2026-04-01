@@ -76,7 +76,6 @@ public class PucharseSteps {
 
     @When("Visualizo los productos en el carrito para proceder con el pago")
     public void viewCart() throws InterruptedException {
-        browserUtils.acceptAlert();
         cartPage.goToCart();
         if (!cartPage.isOnCartPage()) {
             throw new AssertionError("No se visualiza la página del carrito");
