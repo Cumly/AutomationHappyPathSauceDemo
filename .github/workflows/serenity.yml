@@ -32,11 +32,9 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Ejecutar pruebas
-        # El error estaba en el '-' antes de run. Debe ir indentado debajo de name.
-        run: mvn clean verify -Dwebdriver.driver=chrome -Dchrome.switches="--headless;--window-size=1920,1080;--no-sandbox;--disable-dev-shm-usage"
+        run: mvn clean verify -Dwebdriver.driver=chrome -Dchrome.switches="--headless"
 
       - name: Guardar reporte Serenity
-        if: always() # Esto asegura que el reporte se suba aunque los tests fallen
         uses: actions/upload-artifact@v4
         with:
           name: serenity-report
